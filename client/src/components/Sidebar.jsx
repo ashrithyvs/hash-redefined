@@ -12,6 +12,7 @@ export default function Sidebar() {
         {navItems.map((item, idx) => {
           return (
             <motion.h1
+              key={idx}
               whileHover={{ scale: 1.2 }}
               onClick={() => setCurrentPage(navItems[idx])}
               className={`font-semibold text-center cursor-pointer ${

@@ -49,6 +49,18 @@
   background-size: cover;
 }
 
+.dots {
+  background-color: #fff;
+  height: 12px;
+  width: 12px;
+  border-radius: 50%;
+  transition: 0.3s;
+  margin-left: 8px;
+}
+.dots:hover {
+  background-color: #9333ea;
+}
+
 .progress-bar {
   position: fixed;
   top: 0;
