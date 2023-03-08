@@ -33,26 +33,18 @@ export default function Sidebar() {
 
   return (
     <motion.div className="font-extrabold fixed italic w-[15vw] h-[100vh] py-60 bg-slate-900 flex-col space-y-6 px-8 items-center self-center justify-center">
-      <h1
-        // onClick={() =>
-        //   document.getElementById("hero").scrollIntoView({ behavior: "smooth" })
-        // }
-        className="text-5xl text-center cursor-pointer"
-      >
-        {"<Hash />"}
-      </h1>
+      <h1 className="text-5xl text-center cursor-pointer">{"<Hash />"}</h1>
       <div className="flex-col space-y-4 ">
         {navItems.map((item, idx) => {
           return (
             <motion.a
               key={idx}
-              id={item.slug}
               whileHover={{ scale: 1.2 }}
               onClick={() => {
-                setCurrentPage(navItems[idx]);
                 document
                   .getElementById(item.slug)
                   .scrollIntoView({ behavior: "smooth" });
+                setCurrentPage(navItems[idx]);
               }}
               className={`font-semibold block text-center cursor-pointer ${
                 currentPage.name === item.name

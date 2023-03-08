@@ -1,10 +1,7 @@
-import { useState } from "react";
-import "./App.css";
 import { Sidebar, Footer } from "./components";
 import { motion, useScroll, useSpring } from "framer-motion";
 import { Hero, About, Skills, Experience, Projects, Contact } from "./pages";
 function App() {
-  const [count, setCount] = useState(0);
   const { scrollYProgress } = useScroll();
   const scaleX = useSpring(scrollYProgress, {
     stiffness: 100,
@@ -23,7 +20,7 @@ function App() {
           <Experience />
           <Projects />
           {/* <Contact /> */}
-          <Footer />
+          {/* <Footer /> */}
         </div>
       </div>
     </div>

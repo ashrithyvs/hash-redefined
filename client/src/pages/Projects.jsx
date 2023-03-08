@@ -20,6 +20,12 @@ import {
   C5,
   C6,
 } from "../assets";
+import {
+  AiOutlineLinkedin,
+  AiOutlineMail,
+  AiOutlineInstagram,
+  AiOutlineGithub,
+} from "react-icons/ai";
 import { AiOutlineLeft, AiOutlineRight } from "react-icons/ai";
 import ProjectsModal from "../components/ProjectsModal";
 import { motion } from "framer-motion";
@@ -85,6 +91,17 @@ export default function Projects() {
     //   images: [R2],
     // },
   ];
+
+  const social = [
+    {
+      icon: AiOutlineLinkedin,
+      href: "https://www.linkedin.com/in/ashrith-yakkali-a60379191/",
+    },
+    { icon: AiOutlineGithub, href: "https://github.com/ashrithyvs" },
+    { icon: AiOutlineInstagram, href: "https://www.instagram.com/_ashh.y/" },
+    { icon: AiOutlineMail, href: "mailto:ashrithy20@gmail.com" },
+  ];
+
   return (
     <motion.div
       initial={{ opacity: 0, scale: 1 }}
@@ -184,6 +201,23 @@ export default function Projects() {
               </div>
             );
         })}
+      </div>
+      <div className="bg-slate-900 flex flex-col items-center justify-center py-4">
+        <div className="flex space-x-4 my-4 mb-8">
+          {social.map((Item, idx) => {
+            return (
+              <a
+                key={idx}
+                href={Item.href}
+                target="_blank"
+                className="cursor-pointer"
+              >
+                <Item.icon size={26} />
+              </a>
+            );
+          })}
+        </div>
+        <h4>{"<Hash />"} by Ashrith Yakkali</h4>
       </div>
     </motion.div>
   );

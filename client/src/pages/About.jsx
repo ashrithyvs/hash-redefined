@@ -14,9 +14,9 @@ export default function About() {
           className="text-slate-100 font-bold text-xl self-end"
         >
           Hey! I'm Ashrith Yakkali. I'm a self taught MERN stack developer
-          mainly oriented towards client side webapp development in React.js
-          Framework. Do reach out to me for Contracts and Freelancing to
-          projects through contact section!
+          primarily oriented towards client side webapp development in React.js
+          . Do reach out to me for Contracts and Freelancing to projects through
+          contact section!
         </motion.p>
       </div>
     </div>
