@@ -7,7 +7,7 @@ export default function Sidebar() {
     { name: "Skills", slug: "skills" },
     { name: "Experience", slug: "experience" },
     { name: "Projects", slug: "projects" },
-    // { name: "Contact", slug: "contact" },
+    { name: "Contact", slug: "contact" },
   ];
   const [currentPage, setCurrentPage] = useState(navItems[0]);
 

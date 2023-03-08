@@ -1,6 +1,6 @@
 import { Sidebar, Footer } from "./components";
 import { motion, useScroll, useSpring } from "framer-motion";
-import { Hero, About, Skills, Experience, Projects, Contact } from "./pages";
+import { Hero, About, Skills, Experience, Projects } from "./pages";
 function App() {
   const { scrollYProgress } = useScroll();
   const scaleX = useSpring(scrollYProgress, {

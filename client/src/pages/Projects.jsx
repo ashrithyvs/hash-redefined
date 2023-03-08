@@ -202,7 +202,10 @@ export default function Projects() {
             );
         })}
       </div>
-      <div className="bg-slate-900 flex flex-col items-center justify-center py-4">
+      <div
+        id="contact"
+        className="bg-slate-900 flex flex-col items-center justify-center py-4"
+      >
         <div className="flex space-x-4 my-4 mb-8">
           {social.map((Item, idx) => {
             return (
