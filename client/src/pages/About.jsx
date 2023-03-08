@@ -2,7 +2,10 @@ import React from "react";
 import { motion } from "framer-motion";
 export default function About() {
   return (
-    <div className="w-full bg-purple-600 about flex items-center justify-center relative z-10 xl:min-h-screen flex-col md:flex-row">
+    <div
+      id="about"
+      className="w-full bg-purple-600 about flex items-center justify-center relative z-10 xl:min-h-screen flex-col md:flex-row"
+    >
       <div className="w-1/2 m-auto">
         <motion.p
           initial={{ opacity: 0, scale: 1 }}

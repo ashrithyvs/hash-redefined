@@ -2,14 +2,7 @@ import { useState } from "react";
 import "./App.css";
 import { Sidebar, Footer } from "./components";
 import { motion, useScroll, useSpring } from "framer-motion";
-import {
-  JumboIntro,
-  About,
-  Skills,
-  Experience,
-  Projects,
-  Contact,
-} from "./pages";
+import { Hero, About, Skills, Experience, Projects, Contact } from "./pages";
 function App() {
   const [count, setCount] = useState(0);
   const { scrollYProgress } = useScroll();
@@ -24,12 +17,12 @@ function App() {
       <div className="flex items-start mt-[10px] h-[100vh]">
         <Sidebar />
         <div className="flex-col ml-[15vw] w-[85vw]">
-          <JumboIntro />
+          <Hero />
           <About />
-          {/* <Skills /> */}
+          <Skills />
           <Experience />
           <Projects />
-          <Contact />
+          {/* <Contact /> */}
           <Footer />
         </div>
       </div>

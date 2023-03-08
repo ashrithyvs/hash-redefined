@@ -1,7 +1,10 @@
 import { motion } from "framer-motion";
-export default function JumboIntro() {
+export default function Hero() {
   return (
-    <div className=" flex place-items-center h-screen z-0 w-full bg-brand bg-center bg-no-repeat bg-[length:105%_105%] py-28 transition-all duration-75 sticky top-0">
+    <div
+      id="hero"
+      className="flex place-items-center h-screen z-0 w-full bg-brand bg-center bg-no-repeat bg-[length:105%_105%] py-28 transition-all duration-75 sticky top-0"
+    >
       <div className="w-full">
         <motion.div
           initial={{ opacity: 0, scale: 1 }}
