@@ -64,7 +64,15 @@ export default function Projects() {
       affliation: "Personal",
       description:
         "Folium helps users in creating portfolios using easy-to-use User Interface. User just have to fill in their data and choose a template and then it generates html file using ReactDOMServer and Tailwind CSS CDN. Users can also create portfolios using their Google Scholar account.",
-      images: [R2],
+      images: [],
+    },
+    {
+      title: "Instagram Clone",
+      timeline: { from: "January, 2023", to: "March, 2023" },
+      affliation: "Personal",
+      description:
+        "Folium helps users in creating portfolios using easy-to-use User Interface. User just have to fill in their data and choose a template and then it generates html file using ReactDOMServer and Tailwind CSS CDN. Users can also create portfolios using their Google Scholar account.",
+      images: [],
     },
     {
       title: "Chainsaw",
@@ -103,21 +111,23 @@ export default function Projects() {
   ];
 
   return (
-    <motion.div
-      initial={{ opacity: 0, scale: 1 }}
-      whileInView={{ opacity: 1, scale: 1 }}
-      transition={{ duration: 0.5 }}
-      id="projects"
-      className="w-full my-auto flex-col justify-between bg-slate-900  relative z-10 xl:min-h-screen md:flex-row"
-    >
-      <div className="flex items-center my-auto self-center justify-self-center min-h-[75vh]">
+    <div className="flex items-center my-auto self-center bg-slate-900 justify-self-center min-h-[75vh]">
+      <motion.div
+        initial={{ opacity: 0, scale: 1 }}
+        whileInView={{ opacity: 1, scale: 1 }}
+        transition={{ duration: 0.5 }}
+        id="projects"
+        className="w-full my-auto flex-col justify-between bg-slate-900  relative z-10 xl:min-h-screen md:flex-row"
+      >
         {projects.map((project, idx) => {
           if (idx === currentItem)
             return (
               <div
                 key={idx}
                 style={{
-                  backgroundImage: `linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)), url(${project.images[0]})`,
+                  background: project.images[0]
+                    ? `linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)), url(${project.images[0]})`
+                    : "rgb(15,23,42)",
                   backgroundSize: "cover",
                 }}
                 className="min-h-screen min-w-full flex items-center px-6"
@@ -149,7 +159,7 @@ export default function Projects() {
                         }
                         className="flex justify-between cursor-pointer hover:underline"
                       >
-                        <h4 className="font-extrabold text-4xl ">
+                        <h4 className="font-extrabold underline text-4xl ">
                           {project.title}{" "}
                           {project.subTitle && `- ${project.subTitle}`}
                         </h4>
@@ -201,27 +211,27 @@ export default function Projects() {
               </div>
             );
         })}
-      </div>
-      <div
-        id="contact"
-        className="bg-slate-900 flex flex-col items-center justify-center py-4"
-      >
-        <div className="flex space-x-4 my-4 mb-8">
-          {social.map((Item, idx) => {
-            return (
-              <a
-                key={idx}
-                href={Item.href}
-                target="_blank"
-                className="cursor-pointer"
-              >
-                <Item.icon size={26} />
-              </a>
-            );
-          })}
+        <div
+          id="contact"
+          className="bg-slate-900 flex flex-col items-center justify-center py-4"
+        >
+          <div className="flex space-x-4 my-4 mb-8">
+            {social.map((Item, idx) => {
+              return (
+                <a
+                  key={idx}
+                  href={Item.href}
+                  target="_blank"
+                  className="cursor-pointer"
+                >
+                  <Item.icon size={26} />
+                </a>
+              );
+            })}
+          </div>
+          <h4>{"<Hash />"} by Ashrith Yakkali</h4>
         </div>
-        <h4>{"<Hash />"} by Ashrith Yakkali</h4>
-      </div>
-    </motion.div>
+      </motion.div>
+    </div>
   );
 }

@@ -2,6 +2,8 @@ export { default as reactSVG } from "./react.svg";
 export { default as Ash } from "./Ash.jpg";
 export { default as Ash1 } from "./Ash1.jpg";
 export { default as Ash2 } from "./Ash2.jpg";
+export { default as CGI } from "./CGI.png";
+export { default as NXP } from "./NXP.png";
 export { default as Ionio } from "./ionio.jpeg";
 
 export { default as R1 } from "./revvy/r1.png";

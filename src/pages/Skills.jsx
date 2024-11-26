@@ -68,14 +68,17 @@ export default function Skills() {
     },
   ];
   return (
-    <motion.div
-      initial={{ opacity: 0, scale: 1 }}
-      whileInView={{ opacity: 1, scale: 1 }}
-      transition={{ duration: 0.5 }}
-      id="skills"
+    <div
+      id="experience"
       className="w-full my-auto flex flex-col justify-center bg-slate-900 py-24  relative z-10 xl:min-h-[70%] md:flex-row"
     >
-      <div className="flex flex-wrap items-center justify-center min-h-full my-auto">
+      <motion.div
+        initial={{ opacity: 0, scale: 1 }}
+        whileInView={{ opacity: 1, scale: 1 }}
+        transition={{ duration: 0.5 }}
+        id="skills"
+        className="flex flex-wrap items-center justify-center min-h-full my-auto bg-slate-900"
+      >
         {skills.map((Skill, idx) => {
           return (
             <div
@@ -87,7 +90,7 @@ export default function Skills() {
             </div>
           );
         })}
-      </div>
-    </motion.div>
+      </motion.div>
+    </div>
   );
 }

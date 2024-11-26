@@ -10,8 +10,8 @@ function App() {
   });
   return (
     <div className="App  text-slate-200 bg-slate-900">
-      <motion.div className="progress-bar z-50" style={{ scaleX }} />
-      <div className="flex items-start mt-[10px] h-[100vh]">
+      <motion.div className="progress-bar z-50 " style={{ scaleX }} />
+      <div className="flex items-start bg-slate-900 h-[100vh]">
         <Sidebar />
         <div className="flex-col ml-[15vw] w-[85vw]">
           <Hero />

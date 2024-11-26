@@ -5,9 +5,8 @@
 * {
   font-family: "Poppins", sans-serif;
   scrollbar-width: auto;
-  scrollbar-color: #9333ea #fff;
+  scrollbar-color: #9333ea #0f172a;
 }
-
 /* Chrome, Edge, and Safari */
 *::-webkit-scrollbar {
   width: 10px;

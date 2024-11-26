@@ -3,7 +3,7 @@ export default function Hero() {
   return (
     <div
       id="hero"
-      className="flex place-items-center h-screen z-0 w-full bg-brand bg-center bg-no-repeat bg-[length:105%_105%] py-28 transition-all duration-75 sticky top-0"
+      className="flex place-items-center h-screen z-0 w-full bg-brand bg-center bg-no-repeat  py-28 transition-all duration-75 sticky top-0"
     >
       <div className="w-full">
         <motion.div
@@ -14,7 +14,12 @@ export default function Hero() {
         >
           <h1
             className="text-8xl font-bold italic"
-            style={{ fontFamily: "Brig" }}
+            style={{
+              fontFamily: "Brig",
+              // background: "linear-gradient(to bottom, white, red)",
+              // WebkitBackgroundClip: "text",
+              // color: "transparent",
+            }}
           >
             Ashrith Yakkali
           </h1>
