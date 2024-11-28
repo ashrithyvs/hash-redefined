@@ -1,18 +1,33 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { FaReact, FaNodeJs, FaJava } from "react-icons/fa";
+import { FaReact, FaNodeJs, FaJava, FaDocker, FaAndroid } from "react-icons/fa";
+import { TbSettingsAutomation, TbSdk } from "react-icons/tb";
 import {
+  SiRobotframework,
   SiExpress,
   SiMongodb,
   SiFirebase,
   SiJavascript,
-  SiTailwindcss,
-  SiWebflow,
-  SiRedux,
+  SiAppium,
+  SiSelenium,
+  SiTestin,
 } from "react-icons/si";
-import { GrMysql } from "react-icons/gr";
+import { BiLogoPostgresql } from "react-icons/bi";
+import { HiMiniQueueList } from "react-icons/hi2";
 export default function Skills() {
   const skills = [
+    {
+      name: "Java",
+      logo: FaJava,
+    },
+    {
+      name: "DSA",
+      logo: HiMiniQueueList,
+    },
+    {
+      name: "Javascript",
+      logo: SiJavascript,
+    },
     {
       name: "ReactJS",
       logo: FaReact,
@@ -30,41 +45,48 @@ export default function Skills() {
       logo: SiMongodb,
     },
     {
+      name: "Framework Development",
+      logo: SiRobotframework,
+    },
+    {
+      name: "Docker",
+      logo: FaDocker,
+    },
+    {
+      name: "Automation",
+      logo: TbSettingsAutomation,
+    },
+    {
       name: "Firebase",
       logo: SiFirebase,
     },
     {
-      name: "Java",
-      logo: FaJava,
+      name: "Android Development",
+      logo: FaAndroid,
     },
     {
-      name: "Data Structures & Algorithms",
-    },
-    {
-      name: "Javascript",
-      logo: SiJavascript,
-    },
-    {
-      name: "React-Redux",
-      logo: SiRedux,
-    },
-    {
-      name: "SQL Database",
-      logo: GrMysql,
+      name: "SDK Development",
+      logo: TbSdk,
     },
     {
       name: "NoSQL Database",
+      logo: SiMongodb,
     },
     {
-      name: "Tailwind CSS",
-      logo: SiTailwindcss,
+      name: "Postegre SQL",
+      logo: BiLogoPostgresql,
     },
     {
-      name: "Material - UI",
+      name: "Selenium",
+      logo: SiSelenium,
     },
     {
-      name: "Webflow",
-      logo: SiWebflow,
+      name: "Appium",
+      logo: SiAppium,
+    },
+    {
+      name: "TestNG",
+      logo: SiTestin,
     },
   ];
   return (
