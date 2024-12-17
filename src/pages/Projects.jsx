@@ -133,13 +133,9 @@ export default function Projects() {
                 className="min-h-screen min-w-full flex items-center px-6"
               >
                 <AiOutlineLeft
-                  className={` ${
-                    currentItem === 0
-                      ? "hover:cursor-not-allowed"
-                      : "hover:cursor-pointer"
-                  }`}
+                  className="hover:cursor-pointer"
                   onClick={() =>
-                    setCurrentItem((prev) => (prev !== 0 ? prev - 1 : prev))
+                    setCurrentItem((prev) => (prev !== 0 ? prev - 1 : projects.length - 1))
                   }
                   size={40}
                 />
@@ -179,25 +175,20 @@ export default function Projects() {
                           onClick={() => {
                             setCurrentItem(idx);
                           }}
-                          className={`w-[15px] h-[15px]  transition duration-300 rounded-full ${
-                            currentItem === idx
-                              ? "bg-[#9333ea] hover:bg-[#6c12c0]"
-                              : "bg-white hover:bg-[#9333ea]"
-                          }`}
+                          className={`w-[15px] h-[15px]  transition duration-300 rounded-full ${currentItem === idx
+                            ? "bg-[#9333ea] hover:bg-[#6c12c0]"
+                            : "bg-white hover:bg-[#9333ea]"
+                            }`}
                         ></div>
                       );
                     })}
                   </div>
                 </div>
                 <AiOutlineRight
-                  className={` ${
-                    currentItem === projects.length - 1
-                      ? "hover:cursor-not-allowed"
-                      : "hover:cursor-pointer"
-                  }`}
+                  className="hover:cursor-pointer"
                   onClick={() =>
                     setCurrentItem((prev) =>
-                      prev !== projects.length - 1 ? prev + 1 : prev
+                      prev !== projects.length - 1 ? prev + 1 : 0
                     )
                   }
                   size={40}

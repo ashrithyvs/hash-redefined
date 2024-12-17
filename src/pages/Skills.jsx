@@ -21,10 +21,6 @@ export default function Skills() {
       logo: FaJava,
     },
     {
-      name: "DSA",
-      logo: HiMiniQueueList,
-    },
-    {
       name: "Javascript",
       logo: SiJavascript,
     },
@@ -47,6 +43,10 @@ export default function Skills() {
     {
       name: "Framework Development",
       logo: SiRobotframework,
+    },
+    {
+      name: "DSA",
+      logo: HiMiniQueueList,
     },
     {
       name: "Docker",
